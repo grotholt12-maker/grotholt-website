@@ -1,0 +1,341 @@
+/* ==========================
+   BASIS FÜR ALLE PARTNERSEITEN
+   ========================== */
+
+/* Hintergrund (Standard – wird je Marke überschrieben) */
+body.partner-page {
+  background: #000 no-repeat center center fixed;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+/* --- Hauptbereich --- */
+.partner-detail-page {
+  padding: 5rem 0 6rem;
+ /* backdrop-filter: blur(2px);*/
+}
+
+.partner-detail-page .section-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+}
+
+/* --- Text-Panel --- */
+.partner-detail-page .text-panel {
+  background: rgba(0, 0, 0, 0.65);
+  border-radius: 30px;
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.15);
+  padding: 2rem 2.5rem;
+  max-width: 900px;
+  line-height: 1.6;
+  color: #fff;
+}
+
+.partner-detail-page .section-title {
+  margin-bottom: 0.5rem;
+}
+
+.partner-detail-page .section-subtitle {
+  font-weight: 600;
+  color: #ffffff;
+  margin-bottom: 1rem;
+}
+
+.back-link {
+  text-decoration: none;
+  color: #ffffff;
+  display: inline-block;
+  margin-bottom: 1rem;
+  font-size: 0.9rem;
+}
+
+.back-link:hover {
+  color: #b30000;
+}
+
+/* --- Slider --- */
+.slider-wrapper {
+  width: 100%;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* einzelner Slide als Flex-Container, damit das Bild mittig sitzt */
+.slide {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  min-height: 350px;   /* „Rahmenhöhe“ – kannst du anpassen */
+}
+
+.slide.active {
+  display: flex;
+}
+
+/* Bild im Slide: zentriert, sauber skaliert */
+.slide img {
+  max-width: 80%;      /* nicht breiter als 80% des Sliders */
+  max-height: 350px;   /* alle Bilder ungefähr gleich hoch */
+  width: auto;
+  height: auto;
+  object-fit: contain; /* NICHT beschneiden, sondern einpassen */
+  border-radius: 16px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+}
+
+/* --- Pfeile --- */
+.slider-btn {
+  z-index: 5; 
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(153, 153, 153, 0.65);
+  border: none;
+  border-radius: 50%;
+  font-size: 1.5rem;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  transition: background 0.2s ease;
+}
+
+.slider-btn:hover {
+  background: rgba(255, 255, 255, 1);
+}
+
+.slider-btn.prev { left: 25px; }
+.slider-btn.next { right: 25px; }
+
+/* --- Punkte unter dem Slider --- */
+.slider-dots {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 1rem;
+}
+
+.slider-dots .dot {
+  width: 10px;
+  height: 10px;
+  background: #ccc;
+  border-radius: 50%;
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.slider-dots .dot.active {
+  background: #b30000;
+}
+
+/* =====================
+   Firmenlogo oben links
+   ===================== */
+.brand-logo {
+  position: fixed;
+  top: 20px;
+  left: 30px;
+  z-index: 1000;
+  display: block;
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(6px);
+  border-radius: 12px;
+  padding: 6px 10px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.brand-logo:hover {
+  background: rgba(255, 255, 255, 1);
+  transform: scale(1.03);
+}
+
+.brand-logo img {
+  height: 90px;
+  width: auto;
+  display: block;
+}
+
+/* ==========================
+   Logo oben in der Textbox
+   ========================== */
+
+.partner-logo {
+  text-align: center;
+  margin-bottom: 1rem;
+}
+
+.partner-logo img {
+  max-height: 60px;
+  width: auto;
+  display: inline-block;
+  filter: drop-shadow(0 2px 6px rgba(0, 0, 0, 0.2));
+  transition: transform 0.25s ease;
+}
+
+.partner-logo img:hover {
+  transform: scale(1.05);
+}
+
+/* =====================================
+   MARKEN-SPEZIFISCHE ANPASSUNGEN
+   Hintergrund der Markenseite
+   ===================================== */
+
+/* MIELE */
+body.partner-miele {
+  background: url("../img/bg-homepage/miele-bg.jpg") no-repeat center center fixed;
+  background-size: cover;
+}
+
+body.partner-miele .section-title {
+  color: #b30000;
+}
+
+body.partner-miele .slider-dots .dot.active {
+  background: #b30000;
+}
+
+/* BORA */
+body.partner-bora {
+  background: url("../img/bora/bora-page-bg.png") no-repeat center center fixed;
+  background-size: cover;
+}
+body.partner-bora .section-title {
+  color: #ffffff;
+}
+
+/* LEICHT */
+body.partner-leicht {
+  background: url("../img/leicht/leicht-page-bg.png") no-repeat center center fixed;
+  background-size: cover;
+}
+body.partner-leicht .section-title {
+  color: #ffffff;
+}
+
+/* V-ZUG */
+body.partner-vzug {
+  background: url("../img/bg-homepage/vzug-bg.png") no-repeat center center fixed;
+  background-size: cover;
+}
+body.partner-vzug .section-title {
+  color: #ffffff;
+}
+
+/* SIEMENS */
+body.partner-siemens {
+  background: url("../img/siemens/siemens-page-bg.jpg") no-repeat center center fixed;
+  background-size: cover;
+}
+body.partner-siemens .section-title {
+  color: #ffffff;
+}
+
+/* BLANCO */
+body.partner-blanco {
+  background: url("../img/blanco/blanco-page-bg.jpg") no-repeat center center fixed;
+  background-size: cover;
+}
+body.partner-blanco .section-title {
+  color: #ffffff;
+}
+
+/* QUOOKER */
+body.partner-quooker {
+  background: url("../img/quooker/quooker-page-bg.jpg") no-repeat center center fixed;
+  background-size: cover;
+}
+body.partner-quooker .section-title {
+  color: #ffffff;
+}
+
+/* ===== OFYR Hintergrund ===== */
+body.partner-ofyr {
+  background: url("../img/ofyr/ofyr-bg.png") no-repeat center center fixed;
+  background-size: cover;
+}
+body.partener-ofyr .section-title {
+    color: #ffffff
+}
+/* ----- Outdoor-Küchen----*/
+.partner-outdoor {
+  background: url("../img/outdoor/outdoor-bg.jpg") no-repeat center center fixed;
+  background-size: cover;
+}
+
+.partner-outdoor .section-title {
+  color: #f97316; /* warmes Orange */
+}
+
+.partner-outdoor .slider-dots .dot.active {
+  background: #f97316;
+}
+/* Gesamter Partner-Bereich mit Hintergrundbild */
+#partner {
+  position: relative;
+  background: url("img/partner/partner-bg-default.jpg") no-repeat center center;
+  background-size: cover;
+  transition: background-image 0.4s ease, background 0.4s ease;
+  padding-bottom: 3rem; /* falls noch nicht vorhanden */
+}
+
+/* dunkle Überlagerung, damit Logos & Text besser lesbar sind */
+#partner::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.35);
+  pointer-events: none;
+}
+
+/* Inhalt über die Overlay-Ebene legen */
+#partner > * {
+  position: relative;
+  z-index: 1;
+}
+/* --- Hintergrund-Container mit Fade-Effekt --- */
+#partner {
+  position: relative;
+  background: no-repeat center center / cover;
+  overflow: hidden;
+}
+
+#partner::before,
+#partner::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-size: cover;
+  background-position: center;
+  transition: opacity 0.8s ease-in-out;
+}
+
+#partner::before {
+  opacity: 1;
+  z-index: 0;
+}
+
+#partner::after {
+  opacity: 0;
+  z-index: 1;
+}
+
+/* dunkles Overlay für Lesbarkeit */
+#partner .overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.35);
+  z-index: 2;
+  pointer-events: none;
+}
+
+#partner > *:not(.overlay) {
+  position: relative;
+  z-index: 3;
+}
