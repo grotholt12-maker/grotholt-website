@@ -94,13 +94,12 @@ nav a:hover {
    ========================================================= */
 
 .hero {
-  min-height: 70vh;
-  background:  url("../img/bg-homepage/hero-bg-png") center center / cover no-repeat;
-  background-attachment: fixed;
-  background-position: center 0px;/*linear-gra dient(120deg, #000000 0%, #bc6107 55%, #472800 100%);*/
-  color: #ffffff;
-  display: flex;
-  align-items: center;
+    min-height: 70vh;
+    background: url("../img/bg-homepage/hero-bg.jpg") center center / cover no-repeat;
+    background-attachment: fixed;
+    color: #ffffff;
+    display: flex;
+    align-items: center;
 }
 
 .hero-logo {
