@@ -95,7 +95,7 @@ nav a:hover {
 
 .hero {
     min-height: 70vh;
-    background: url("../img/bg-homepage/hero-bg.jpg") center center / cover no-repeat;
+    background: url("../img/bg-homepage/hero-bg.png") center center / cover no-repeat;
     background-attachment: fixed;
     color: #ffffff;
     display: flex;
